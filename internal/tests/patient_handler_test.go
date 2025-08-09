@@ -83,7 +83,7 @@ func TestPatientHandler_SearchHandler(t *testing.T) {
 			wantStatusCode: http.StatusInternalServerError,
 		},
 		{
-			name: "negative hospital id",
+			name: "negative hospital id error",
 			searchFunc: func(ctx context.Context, criteria dto.PatientSearchCriteria) ([]entities.Patient, error) {
 				return []entities.Patient{}, nil
 			},
