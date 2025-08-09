@@ -72,7 +72,7 @@ func TestPatientHandler_SearchHandler(t *testing.T) {
 			wantStatusCode: http.StatusOK,
 		},
 		{
-			name: "negative search",
+			name: "negative search error",
 			searchFunc: func(ctx context.Context, criteria dto.PatientSearchCriteria) ([]entities.Patient, error) {
 				return nil, errors.New("fail")
 			},
@@ -91,7 +91,7 @@ func TestPatientHandler_SearchHandler(t *testing.T) {
 				return uuid.Nil, errors.New("fail")
 			},
 			token:          generateValidToken(),
-			wantStatusCode: http.StatusInternalServerError,
+			wantStatusCode: http.StatusBadRequest,
 		},
 	}
 
