@@ -69,7 +69,7 @@ func main() {
 	api := r.Group("/api")
 
 	// Public routes
-	api.POST("/staff", staffHandler.CreateHandler)
+	api.POST("/staff/create", staffHandler.CreateHandler)
 	api.POST("/staff/login", staffHandler.LoginHandler)
 
 	// Authenticated routes

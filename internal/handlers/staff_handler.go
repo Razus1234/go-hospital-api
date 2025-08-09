@@ -32,7 +32,7 @@ func NewStaffHandler(service services.StaffServiceInterface) *StaffHandler {
 // @Success 200 {object} dto.StaffResponse
 // @Failure 400 {object} dto.ErrorResponse "bad request"
 // @Failure 500 {object} dto.ErrorResponse "internal server error"
-// @Router /staff [post]
+// @Router /staff/create [post]
 func (h *StaffHandler) CreateHandler(c *gin.Context) {
 	var req dto.StaffCreateRequest
 	if err := c.ShouldBindJSON(&req); err != nil {

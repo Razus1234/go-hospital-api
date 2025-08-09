@@ -154,7 +154,7 @@ paths:
       - BearerAuth: []
       tags:
       - patients
-  /staff:
+  /staff/create:
     post:
       consumes:
       - application/json

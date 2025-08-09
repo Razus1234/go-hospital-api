@@ -76,7 +76,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/staff": {
+        "/staff/create": {
             "post": {
                 "description": "Create a new staff",
                 "consumes": [

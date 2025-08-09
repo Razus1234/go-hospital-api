@@ -96,7 +96,7 @@ DTOs (Data Transfer Objects) are used for request/response payloads and are conv
 
 #### Staff
 
-- **POST /api/staff**
+- **POST /api/staff/create**
   - Create a new staff member.
   - Request body: `StaffCreateRequest`
   - Response: `StaffResponse` or `ErrorResponse`
